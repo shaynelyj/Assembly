@@ -6,6 +6,7 @@ section .text
 
 _start:
 	
+	mov rax, 7
 	call _displaynum
 
 	mov rax, 60
@@ -14,7 +15,7 @@ _start:
 
 _displaynum:
 
-	add rax, 52
+	add rax, 48
 	mov [digit], al
 
 	mov rax, 1
