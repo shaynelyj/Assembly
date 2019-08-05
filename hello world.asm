@@ -7,12 +7,18 @@ section .text
 	global _start
 
 _start:
-	mov rax, 1
-	mov rdi, 1
-	mov rsi, text
-	mov rdx, 13
-	syscall
+
+	call _printText
 
 	mov rax, 60
 	mov rdi, 0
 	syscall
+
+_printText:
+
+	mov rax, 1
+	mov rdi, 1
+	mov rsi, text
+	mov rdx, 12
+	syscall
+	ret
