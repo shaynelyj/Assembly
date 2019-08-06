@@ -7,13 +7,13 @@ section .text
 _start:
 	
 	mov rax, 7
-	call _displaynum
+	call _printRAXDigit
 
 	mov rax, 60
 	mov rdi, 0
 	syscall
 
-_displaynum:
+_printRAXDigit:
 
 	add rax, 48
 	mov [digit], al
